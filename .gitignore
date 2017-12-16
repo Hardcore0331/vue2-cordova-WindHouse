@@ -1,6 +1,7 @@
 node_modules/
 hybridApp/platforms/
 hybridApp/www/
+hybridApp/plugins/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
