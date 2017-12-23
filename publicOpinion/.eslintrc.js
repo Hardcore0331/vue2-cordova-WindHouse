@@ -8,6 +8,11 @@ module.exports = {
   },
   env: {
     browser: true,
+    jquery: true,
+  },
+  "globals": {
+	"axios": true,
+	"$": true
   },
   extends: 'airbnb-base',
   // required to lint *.vue files

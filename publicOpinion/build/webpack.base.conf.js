@@ -1,8 +1,10 @@
 'use strict'
+const webpack = require('webpack')
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -16,22 +18,22 @@ const createLintingRule = () => ({
   options: {
     formatter: require('eslint-friendly-formatter'),
     emitWarning: !config.dev.showEslintErrorsInOverlay,
-    //autofix 
-    fix: true
+    // autofix
+    fix: true,
   }
 })
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
   },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+      : config.dev.assetsPublicPath,
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -46,7 +48,7 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: vueLoaderConfig
+        options: vueLoaderConfig,
       },
       {
         test: /\.js$/,
@@ -79,6 +81,13 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      axios: 'axios',  // 各个模块都可以使用axios
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
+  ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).
@@ -89,6 +98,6 @@ module.exports = {
     fs: 'empty',
     net: 'empty',
     tls: 'empty',
-    child_process: 'empty'
+    child_process: 'empty',
   }
 }
