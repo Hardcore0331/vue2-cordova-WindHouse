@@ -12,7 +12,8 @@ module.exports = {
   },
   "globals": {
 	"axios": true,
-	"$": true
+	"$": true,
+	"router": true
   },
   extends: 'airbnb-base',
   // required to lint *.vue files
