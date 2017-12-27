@@ -14,29 +14,28 @@ export default new Router({
       path: '/',
       name: 'Main',
       component: Main,
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home,
-    },
-    {
-      path: '/message',
-      name: 'message',
-      component: Message,
-    },
-    {
-      path: '/discover',
-      name: 'discover',
-      component: {
-        defult: Discover,
-        'footer-nav': Main,
-      },
-    },
-    {
-      path: '/mine',
-      name: 'mine',
-      component: Mine,
+      children: [
+        {
+          path: '/home',
+          name: 'home',
+          component: Home,
+        },
+        {
+          path: '/message',
+          name: 'message',
+          component: Message,
+        },
+        {
+          path: '/discover',
+          name: 'discover',
+          component: Discover,
+        },
+        {
+          path: '/mine',
+          name: 'mine',
+          component: Mine,
+        },
+      ],
     },
   ],
 });

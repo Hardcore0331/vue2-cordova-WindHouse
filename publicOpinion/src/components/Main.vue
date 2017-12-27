@@ -1,26 +1,28 @@
 <template>
-  <div>
+  <div class="wrapper">
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
-    <mt-tabbar v-model="selected">
-      <mt-tab-item id="home">
-        <img slot="icon" src="../assets/logo.png">
-        首页
-      </mt-tab-item>
-      <mt-tab-item id="message"> 
-        <img slot="icon" src="../assets/logo.png">
-        消息
-      </mt-tab-item>
-      <mt-tab-item id="discover">
-        <img slot="icon" src="../assets/logo.png">
-        发现
-      </mt-tab-item>
-      <mt-tab-item id="mine">
-        <img slot="icon" src="../assets/logo.png">
-        我的
-      </mt-tab-item>
-    </mt-tabbar>
+    <footer>
+      <ul>
+        <router-link tag="li" to="/home">
+          <i class="fa fa-home"></i>
+          <span>首页</span>
+        </router-link>
+        <router-link tag="li" to="/message">
+          <i class="fa fa-envelope"></i>
+          <span>消息</span>
+        </router-link>
+        <router-link tag="li" to="/discover">
+          <i class="fa fa-book"></i>
+          <span>发现</span>
+        </router-link>
+        <router-link tag="li" to="/mine">
+          <i class="fa fa-user"></i>
+          <span>我的</span>
+        </router-link>
+      </ul>
+    </footer>
   </div>
 </template>
 
@@ -44,5 +46,42 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="less">
+  .wrapper {
+    height: 100%
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    border-top: .0625rem solid #e4e4e4;
+    background:#f8f8f8;
+    ul li {
+    float:left;
+    text-align:center;
+    width:25%;
+    line-height:20px;
+    i {
+      padding-top:5px;
+      display:block;
+      //color:#be966c;
+    }
+    span{
+      // color:#914e07;
+      font-size: .625rem;
+    } 
+  }
+
+  .router-link-active i{
+    color: orange;
+    font-weight:bold;
+  }
+
+  .router-link-active span{
+    color:orange;
+    font-weight:bold;
+  }
+}
 </style>
