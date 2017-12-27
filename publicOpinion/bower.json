@@ -1,0 +1,20 @@
+{
+  "name": "publicopinion",
+  "description": "public opinion",
+  "main": "",
+  "authors": [
+    "huhao"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Hardcore0331/vue2-cordova-publicOpinion",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
