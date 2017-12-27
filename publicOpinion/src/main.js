@@ -7,7 +7,7 @@ import 'mint-ui/lib/style.css';
 import App from './App';
 import router from './router';
 
-require('../bower_components/font-awesome/css/font-awesome.css');
+require('font-awesome/css/font-awesome.css');
 
 window.router = router;
 Vue.use(Mint);
