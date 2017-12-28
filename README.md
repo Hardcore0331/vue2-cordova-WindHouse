@@ -4,16 +4,23 @@ hybridApp based on vue2 and cordova
 # 说明
 > 项目基于 : vue2 + vue-router + cordova + nodejs
 
-> backend后端目录, hybridApp是cordova工程目录, publicOpinion是vue工程目录
+> backendshi是后端目录, hybridApp是cordova工程目录, publicOpinion是vue工程目录
 
 > vue打包后可生成浏览器访问的webapp, 同时生成html,css,js文件到cordova工程目录，经cordova打包后生成apk或ipa
 
 
 # 运行
 ``` bash
+# 0. 需要安装node npm bower cordova
+
+bower： npm install -g bower
+
+cordova： npm install -g cordova
+  
+
 # 1. git clone git@github.com:Hardcore0331/vue2-cordova-publicOpinion.git
 
-# 2. 安装后台依赖，启动node服务器
+# 2. 安装后端依赖，启动node服务器
 
 cd backend
 
@@ -21,7 +28,7 @@ npm install
 
 npm start
 
-# 3. 启动/打包前台
+# 3. 启动/打包前端
 
 cd publicOpinion
 
@@ -39,5 +46,6 @@ cd hybridApp
 cordova platform add android (cordova platform add ios)
 
 cordova build android 
+(需要安装android target / API level: 'android-26'; 打包过程如果遇到space错误，可能需要增加环境变量_JAVA_OPTIONS，值为-Xmx512M)
 
 ```
