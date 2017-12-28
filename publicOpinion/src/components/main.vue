@@ -5,19 +5,19 @@
     </keep-alive>
     <footer>
       <ul>
-        <router-link tag="li" to="/home">
+        <router-link tag="li" to="/home" replace>
           <i class="fa fa-home"></i>
           <span>首页</span>
         </router-link>
-        <router-link tag="li" to="/message">
+        <router-link tag="li" to="/message" replace>
           <i class="fa fa-envelope"></i>
           <span>消息</span>
         </router-link>
-        <router-link tag="li" to="/discover">
+        <router-link tag="li" to="/discover" replace>
           <i class="fa fa-book"></i>
           <span>发现</span>
         </router-link>
-        <router-link tag="li" to="/mine">
+        <router-link tag="li" to="/mine" replace>
           <i class="fa fa-user"></i>
           <span>我的</span>
         </router-link>
