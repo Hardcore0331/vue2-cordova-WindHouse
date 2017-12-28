@@ -56,7 +56,7 @@
       });
     },
     activated() {
-      if (this.autoPlay) {
+      if (this.autoPlay && this.slider) {
         this._play();
       }
     },
