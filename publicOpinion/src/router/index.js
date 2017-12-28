@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Main from '@/components/Main';
-import Home from '@/components/Home';
-import Message from '@/components/Message';
-import Discover from '@/components/Discover';
-import Mine from '@/components/Mine';
+import Main from '@/components/main';
+import Home from '@/components/home';
+import Message from '@/components/message';
+import Discover from '@/components/discover';
+import Mine from '@/components/mine';
 
 Vue.use(Router);
 

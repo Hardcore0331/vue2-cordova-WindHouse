@@ -32,19 +32,13 @@ module.exports = {
   rules: {
     // don't require .vue extension when importing
     'no-console': 'off',
+	'no-underscore-dangle': 'off',
+	'no-param-reassign': 0,
+	'no-plusplus': 'off',
+	'no-restricted-syntax': 'off',
     'import/extensions': ['error', 'always', {
       js: 'never',
       vue: 'never'
-    }],
-    // disallow reassignment of function parameters
-    // disallow parameter object manipulation except for specific exclusions
-    'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'state', // for vuex state
-        'acc', // for reduce accumulators
-        'e' // for e.returnvalue
-      ]
     }],
     // allow optionalDependencies
     'import/no-extraneous-dependencies': ['error', {
