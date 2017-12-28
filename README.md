@@ -29,7 +29,8 @@ npm install  安装依赖
 
 npm run dev  开发模式(热更新)，访问127.0.0.1:8080查看效果
 
-npm run build  生产模式，打包后文件生成在hybridApp\www目录(publicOpinion/config/prod.env.js中的URL需要配置为后台启动的ip地址再打包，否则生成的hybrid无法连接后台)
+配置publicOpinion/config/prod.env.js中的URL为后台启动的ip地址(否则生成的hybrid无法连接后台)
+npm run build  生产模式，打包后文件生成在hybridApp\www目录
 
 # 4. 生成hybrid app
 
