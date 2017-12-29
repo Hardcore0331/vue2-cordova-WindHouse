@@ -13,7 +13,10 @@
     </div>
     <div class="content">
       <banner class="banner"></banner>
-      <div style="height:1000px">test for scroll</div>
+      <div style="height:1000px">
+        <span>{{clickType}}</span>
+        <button class="tapTest">单击/双击</button>
+      </div>
     </div>
   </div>
 </template>
@@ -25,6 +28,27 @@ export default {
   name: 'home',
   components: {
     banner,
+  },
+  data() {
+    return {
+      clickType: '尚未点击',
+    };
+  },
+  mounted() {
+    this.$nextTick(() => {
+      console.log($('.tapTest'));
+      console.log($('.tapTest').hasClass('tapTest'));
+      console.log($('.tapTest').hasClass('tapTest22'));
+      $('.tapTest').on('singleTap', () => {
+        console.log('singleTap');
+        console.log(this);
+        this.clickType = '单击';
+      });
+      $('.tapTest').on('doubleTap', () => {
+        console.log('doubleTap');
+        this.clickType = '双击';
+      });
+    });
   },
 };
 </script>
