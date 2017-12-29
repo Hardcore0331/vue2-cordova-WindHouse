@@ -40,6 +40,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'zepto': path.join(__dirname, '../node_modules/webpack-zepto/index.js'),
     },
     modules: ['bower_components', 'node_modules']
   },
@@ -85,8 +86,9 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       axios: 'axios',  // 各个模块都可以使用axios
-      $: 'jquery',
-      jQuery: 'jquery',
+      $: 'zepto',
+      zepto: 'zepto',
+      'window.Zepto': 'zepto',
     }),
   ],
   node: {

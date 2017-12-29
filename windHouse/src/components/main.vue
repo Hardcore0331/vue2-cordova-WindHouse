@@ -35,6 +35,7 @@ export default {
     };
   },
   created() {
+    console.log($);
   },
   watch: {
     selected(newTab) {
