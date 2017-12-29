@@ -1,6 +1,6 @@
 {
-  "name": "com.hh.publicopinion",
-  "displayName": "publicOpinion",
+  "name": "com.hh.windHouse",
+  "displayName": "windHouse",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
