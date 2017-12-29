@@ -11,7 +11,7 @@ hybridApp based on vue2 and cordova
 
 # 运行
 ``` bash
-# 0. 需要安装node npm bower cordova
+# 0. 需要安装 node npm bower cordova
 
 bower： npm install -g bower
 
