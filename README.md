@@ -1,10 +1,10 @@
-# vue2-cordova-publicOpinion
+# vue2-cordova-windHouse
 hybridApp based on vue2 and cordova
 
 # 说明
 > 项目基于 : vue2 + vue-router + cordova + nodejs
 
-> backendshi是后端目录, hybridApp是cordova工程目录, publicOpinion是vue工程目录
+> backend是后端目录, hybridApp是cordova工程目录, windHouse是vue工程目录
 
 > vue打包后可生成浏览器访问的webapp, 同时生成html,css,js文件到cordova工程目录, 经cordova打包后生成apk或ipa
 
@@ -18,7 +18,7 @@ bower： npm install -g bower
 cordova： npm install -g cordova
   
 
-# 1. git clone git@github.com:Hardcore0331/vue2-cordova-publicOpinion.git
+# 1. git clone git@github.com:Hardcore0331/vue2-cordova-windHouse.git
 
 # 2. 安装后端依赖，启动node服务器
 
@@ -30,13 +30,13 @@ npm start
 
 # 3. 启动/打包前端
 
-cd publicOpinion
+cd windHouse
 
 npm install  安装依赖
 
 npm run dev  开发模式(热更新)，访问127.0.0.1:8080查看效果
 
-配置publicOpinion/config/prod.env.js中的URL为后台启动的ip地址(否则生成的hybrid无法连接后台)
+配置windHouse/config/prod.env.js中的URL为后台启动的ip地址(否则生成的hybrid无法连接后台)
 npm run build  生产模式,打包后文件生成在hybridApp\www目录
 
 # 4. 生成hybrid app
