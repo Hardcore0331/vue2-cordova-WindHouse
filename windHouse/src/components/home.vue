@@ -68,10 +68,8 @@ export default {
     margin: 10px auto;
     border-radius: 2px;
     background: #f8f8f8;
-    display: table;
     .chose_city {
       flex: 1;
-      display: table-cell;
       padding: 5px 0 5px 5px;
       .icon {
         margin-left: 5px;
