@@ -1,7 +1,7 @@
 # vue2-cordova-windHouse
 hybridApp based on vue2 and cordova
 
-# 说明
+# 说明 
 > 项目基于 : vue2 + vue-router + cordova + nodejs
 
 > backend是后端目录, hybridApp是cordova工程目录, windHouse是vue工程目录
